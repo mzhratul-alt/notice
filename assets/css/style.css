@@ -1,0 +1,98 @@
+/*
+Teamplate Name: Zakkash
+Author: Creative IT Institute
+Version: 1.0
+
+----------------------------------------------------------------
+Table of Contents
+----------------------------------------------------------------
+    1) Common Css
+    2) About Css
+*/
+
+/* Common  Css Start */
+:root {
+  --heiglight-color: #37a000;
+
+  --text-color: #777;
+  --heading: #353535;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+span,
+p,
+address {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+p {
+  line-height: 1.5;
+}
+
+#notice {
+  width: 612px;
+  height: 792px;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  border-bottom: 25px solid #ec2326;
+  padding: 30px;
+  position: relative;
+}
+.contact_info {
+  padding-left: 90px;
+}
+.contact_info h5 {
+  font-size: 18px;
+  color: #ec2326;
+}
+.contact_info address,
+.contact_info p {
+  font-size: 14px;
+}
+.notice_footer {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+.notice_footer p span {
+  display: inline-block;
+  position: relative;
+  padding: 0 15px;
+}
+.notice_footer p span::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 70%;
+  background-color: #353535;
+  top: 15%;
+  right: 0;
+}
+.notice_footer p span:last-child:after {
+  display: none;
+}
+#captured_output {
+  width: 612px;
+  height: 792px;
+  margin: 0 auto;
+}

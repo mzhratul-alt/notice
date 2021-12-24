@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Creative It Institute" />
+    <meta name="Frontend Developer" content="CIT CH RWD-2103" />
+    <meta name="UI/UX Designer" content="Creative It Institute" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notice Generator</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
+    <!-- Fontawesome Css -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Main Style Css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      @page {
+        margin: 0px 0px 0px 0px !important;
+        padding: 0px 0px 0px 0px !important;
+      }
+    </style>
+  </head>
+
+  <body class="pt-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="input_form">
+            <form class="row">
+              <div class="col-12">
+                <input type="text" id="source_input" onkeyup="source_func()" class="form-control mb-3" placeholder="সূত্র" />
+              </div>
+              <div class="col-12">
+                <input type="text" id="date_input" onkeyup="date_func()" class="form-control mb-3" placeholder="তারিখ" />
+              </div>
+              <div class="col-12">
+                <input id="greetings_input" onkeyup="greetings_func()" class="form-control mb-3" placeholder="শুভেচ্ছা" />
+              </div>
+              <div class="col-12">
+                <textarea id="notice_input" onkeyup="notice_func()" class="form-control mb-3" placeholder="নোটিশ"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="button" class="btn btn-success" onclick="capture()">Capture Notice</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6" id="notice">
+          <div>
+            <div class="notice_header d-flex flex-wrap">
+              <div class="logo w-25">
+                <img src="assets/images/logo.png" alt="" />
+              </div>
+              <div class="contact_info w-75">
+                <h5>Creative IT Institute, Chattogram Branch</h5>
+                <address class="text-justify">
+                  <b>House No.: </b>09, Kapasgola Road, Telpottir More,<br />
+                  Chawk Bazar, Chattogram 4203, Bangladesh
+                </address>
+                <p>
+                  <b>M: 01847-422 968, 01847-422 971, 01847-422 979</b>
+                </p>
+              </div>
+            </div>
+            <div class="notice_info d-flex flex-wrap mt-4">
+              <p class="w-50"><span>সূত্রঃ</span> <span id="source_output">সিআইটি/মাঃসঃ/বিজ্ঞপ্তি/ছুটি/২০২১</span></p>
+              <p class="text-end w-50"><span>তারিখঃ</span> <span id="date_output">১৭-০৭-২০২১ ইং</span></p>
+              <h2 class="text-center w-100 mt-3">বিজ্ঞপ্তি</h2>
+            </div>
+            <div class="notice_body">
+              <p class="text-justify mb-3">
+                <span id="greetings_output"></span><br />
+                <span>আসসালামু আলাইকুম</span>
+              </p>
+              <p class="text-justify mb-5" id="notice_output"></p>
+              <p class="text-justify">ধন্যবাদান্তে,<br />ক্রিয়েটিভ আইটি ইনস্টিটিউট,<br />চট্টগ্রাম ব্রাঞ্চ</p>
+            </div>
+            <div class="notice_footer">
+              <p>
+                <span>CHANGE</span>
+                <span>GROW</span>
+                <span>SUCCEED</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="height:10px; background-color:red; margin:50px 0;"></div>
+      <div class="row">
+        <div id="captured_output"></div>
+      </div>
+    </div>
+    <!-- If Javascript is disable -->
+    <noscript>You have to enable javascript to view this site.</noscript>
+    <!-- Jquery Js -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap Js Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- html2canvas Js -->
+    <script src="assets/js/html2canvas.js"></script>
+    <!-- Main Js -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
